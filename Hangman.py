@@ -1,6 +1,5 @@
 import random
-from hangman_arts import stages
-from hangman_arts import logo
+from hangman_arts import stages, logo
 from hangman_topics import topics
 
 
