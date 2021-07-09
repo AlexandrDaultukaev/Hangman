@@ -1,6 +1,9 @@
 import random
 from hangman_arts import stages
+from hangman_arts import logo
 from hangman_topics import topics
+
+
 def print_hung(hung):
     print(stages[hung])
 
@@ -43,7 +46,10 @@ def logic():
         user_word = relace_user_word(hung_word, letter, user_word)
         if temp == user_word:
             hung += 1
-        elif user_word == hung_word:
+            print("You lose a life\n")
+        else:
+            print("You guessed a letter\n")
+        if user_word == hung_word:
             win = True
             print("YOU WIN!")
             exit()
@@ -51,6 +57,8 @@ def logic():
         print(user_word)
     print("YOU LOSE!")
 
+
+print(logo)
 hung_word = create_hung_word()
 user_word = create_user_word()
 logic()
